@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3>Where to Find US:</h3>
-    <%--<div id="map"></div>
+   <div id="map"></div>
     <script>
         // Initialize and add the map
         function initMap() {
@@ -18,10 +18,11 @@
  
     <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf4uB4jfi4hjUStU5_BMIJKeu9xzkhEek&callback=initMap">
-    </script>--%>
+    </script>
+    
+     <%--<iframe width="100%" height="390" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=940&amp;height=390&amp;hl=en&amp;q=237%20W.I,%206%20Old%20Hope%20%20Road%20Kingston+(Where%20to%20Find%20Us:)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://embedmap.org/'>how to embed google map</a> 
+    <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=16e0ac4526c81cef4de25578ae846d273466d8c7'></script>--%>
 
-    <iframe width="100%" height="390" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=940&amp;height=390&amp;hl=en&amp;q=237%20W.I,%206%20Old%20Hope%20%20Road%20Kingston+(Where%20to%20Find%20Us:)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://embedmap.org/'>how to embed google map</a> 
-    <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=16e0ac4526c81cef4de25578ae846d273466d8c7'></script>
 
     <address>
         <h4>OFFIC LOCATION:</h4>
