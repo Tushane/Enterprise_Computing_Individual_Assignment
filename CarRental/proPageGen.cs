@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 
 namespace CarRental
-{
+{ 
     public class proPageGen
     {
 
@@ -18,9 +18,18 @@ namespace CarRental
                 string prod_image = "<img style='width:90%; height=45%;' src='" + data.getIL() + "'/>";
                 string price = "<p>" + "USD$" + data.getPrice().ToString("0.00") + "</p>";
                 string description = "<p>" + data.getDescription() + "</p>";
-                newdiv.InnerHtml = prod_image + price + description + "<p><a class='btn btn-default' href='https://go.microsoft.com/fwlink/?LinkId=301948'>ADD TO CART &raquo;</a> </p>";
+                newdiv.InnerHtml = prod_image + price + description + "<p><a class='btn btn-default' runat=\"server\" onclick='press()'>ADD TO CART &raquo;</a> </p>";
 
                   return newdiv;
+        }
+
+        public System.Web.UI.HtmlControls.HtmlGenericControl Cart_generate(CustCart data)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl newdiv = new System.Web.UI.HtmlControls.HtmlGenericControl("A");
+
+            newdiv.Attributes.Add("class", "#");
+            newdiv.InnerHtml = data.Get_custid();
+            return newdiv;
         }
 }
 }

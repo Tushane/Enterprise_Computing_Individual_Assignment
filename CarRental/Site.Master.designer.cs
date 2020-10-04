@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarRental {
-    
-    
-    public partial class SiteMaster {
-        
+namespace CarRental
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// logo control.
         /// </summary>
@@ -20,7 +22,16 @@ namespace CarRental {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor logo;
-        
+
+        /// <summary>
+        /// items control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder items;
+
         /// <summary>
         /// MainContent control.
         /// </summary>

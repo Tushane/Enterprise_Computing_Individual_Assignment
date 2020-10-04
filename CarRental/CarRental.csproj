@@ -193,6 +193,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustCart.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,6 +222,7 @@
     <Compile Include="ProductListGenerator.cs" />
     <Compile Include="proPageGen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectedCars.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
