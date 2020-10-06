@@ -15,3 +15,7 @@ window.onclick = function (event) {
         }
     }
 }
+
+function onclick() {
+    PageMethods.Add_to_cart_Click();
+}

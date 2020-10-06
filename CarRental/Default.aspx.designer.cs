@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarRental {
-    
-    
-    public partial class _Default {
-        
+namespace CarRental
+{
+
+
+    public partial class _Default
+    {
+
         /// <summary>
         /// maindivs control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace CarRental {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder maindivs;
-        
+
         /// <summary>
         /// but control.
         /// </summary>

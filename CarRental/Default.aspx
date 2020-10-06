@@ -51,15 +51,16 @@
             <span class="dot" onclick="currentSlide(6)"></span>
         </div>
         
-        <%--<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>--%>
     </div>
    
     <div class="row">
          <hr style="background-color:black" />
         <asp:PlaceHolder ID ="maindivs" runat="server">    </asp:PlaceHolder>
         
+        <br />
         <div id ="VIEWALL">
-            <asp:Button ID="but" runat="server" Text="VIEW ALL" PostBackUrl="~/Product.aspx" />
+            <asp:Button ID="but" class='btn btn-default' runat="server" Text="VIEW ALL"  PostBackUrl="~/Product.aspx" />
+
         </div>
 
     </div>
