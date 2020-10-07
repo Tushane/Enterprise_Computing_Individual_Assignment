@@ -37,7 +37,9 @@ namespace CarRental
             }
             else 
             {
-                 Load_Cart();
+                proPageGen webgen = new proPageGen();
+                items.Controls.Add(webgen.Cart_generate("Cart Empty", "remove"));
+                Load_Cart();
              };
 
         }
@@ -45,7 +47,6 @@ namespace CarRental
 
         protected void but_clear_cart(object sender, EventArgs e)
         { 
-            clear = true;
 
             //if (FindControl("remove").Visible == false)
             //{
@@ -57,7 +58,7 @@ namespace CarRental
             if (main_load != null)
             {
                 // main_load = new HttpCookie("main_load");
-                main_load.Value = "no";
+                main_load.Value = "yes";
                 main_load.Path = Request.ApplicationPath;
                 main_load.Expires = DateTime.Now.AddYears(1);
                 Response.Cookies.Add(main_load);
@@ -65,6 +66,7 @@ namespace CarRental
 
 
             remove_cookie();
+            Response.Redirect(Request.Url.AbsolutePath);
 
         }
 
@@ -79,8 +81,11 @@ namespace CarRental
                 for (int i = 1; i <= size; i++)
                 {
                     HttpCookie bybye = Request.Cookies["cart_info" + i.ToString()];
-                    bybye.Expires = DateTime.Now.AddDays(-1);
-                    Response.Cookies.Add(bybye);
+                    if (bybye != null)
+                    {
+                        bybye.Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies.Add(bybye);
+                    }
                 }
 
                 temp.Expires = DateTime.Now.AddDays(-1);
@@ -92,11 +97,11 @@ namespace CarRental
 
         protected void Load_Cart()
         {
+            if (FindControl("remove").Visible != false)
+            {
+                FindControl("remove").Visible = false;
+            }
 
-            //if (FindControl("remove").Visible != false)
-            //{
-            //    FindControl("remove").Visible = false;
-            //}
 
             int stop = 0;
 
@@ -141,22 +146,23 @@ namespace CarRental
 
                        items.Controls.Add(webgen.Cart_generate(data, prod_id));
 
+                        Button button1 = new Button();
+                        button1.Text = "DELETE";
+                        button1.CssClass = "btn btn-default";
+                        button1.ID = "cart_info" + i.ToString();
+                        button1.Attributes.Add("Style", "text-align:center;");
+                        button1.Click += new EventHandler(but_delete_item);
+                        items.Controls.Add(button1);
+
                         System.Web.UI.HtmlControls.HtmlGenericControl newdiv1 = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
                         newdiv1.InnerHtml = "____________________________";
                         newdiv1.Attributes.Add("Style", "color:black;");
                         items.Controls.Add(newdiv1);
                     }
                 }
-
-                System.Web.UI.HtmlControls.HtmlGenericControl newdiv = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
-                newdiv.InnerHtml = "____________________________";
-                newdiv.Attributes.Add("Style", "color:black;");
-
-                //newdiv.ID = "line";
-                items.Controls.Add(newdiv);
                items.Controls.Add(webgen.Cart_generate("Total = $" + _total.ToString(), ""));
 
-                newdiv = new System.Web.UI.HtmlControls.HtmlGenericControl("A");
+                System.Web.UI.HtmlControls.HtmlGenericControl newdiv = new System.Web.UI.HtmlControls.HtmlGenericControl("A");
                 newdiv.Attributes.Add("class", "btn btn - default");
                 newdiv.Attributes.Add("href", "");
                 newdiv.InnerText = "CHECK OUT";
@@ -171,6 +177,23 @@ namespace CarRental
                items.Controls.Add(button);
             }
         }
+
+        protected void but_delete_item(Object sender, EventArgs e)
+        {
+            Response.Cookies[((Button)sender).ID].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect(Request.Url.AbsolutePath);
+        }
+
+        //void Application_Error(Object sender, EventArgs e)
+        //{
+        //    Exception exc = Server.GetLastError();
+
+        //    if (exc is HttpUnhandledException)
+        //    {
+        //        Server.Transfer("ErrorPage.aspx?handler=Application_Error%20-%20Global.asax", true);
+        //    }
+
+        //}
 
     }
 

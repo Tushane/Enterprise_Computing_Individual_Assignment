@@ -18,11 +18,11 @@
     height:100%;*/
 }
 
-    #shop_cart:hover {
+/*    #shop_cart:hover {
         background: white;
         color: black;
         padding-left: 5%;
-    }
+    }*/
 
 #navpo {
     float: right;
@@ -263,8 +263,12 @@ img {
 .dropdown {
     position: relative;
     display: inline-block;
+   
 }
 
+/*#myDropdown {
+    overflow: scroll;
+}*/
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -273,6 +277,10 @@ img {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow-y: auto;
+    height: 800%;
 }
 
     /* Links inside the dropdown */
