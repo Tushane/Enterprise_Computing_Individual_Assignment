@@ -59,11 +59,15 @@
         
         <br />
         <div id ="VIEWALL">
+            <br />
+            <br />
             <asp:Button ID="but" class='btn btn-default' runat="server" Text="VIEW ALL"  PostBackUrl="~/Product.aspx" />
-
+            <%--<asp:Calendar ID="Calendar1" runat="server" SelectedDayStyle-BackColor="#0099FF" SelectionMode="Day"></asp:Calendar>--%>
+            <asp:Label ID ="error" runat="server"></asp:Label>
         </div>
 
     </div>
+   
 
 <script>
 var slideIndex = 0;

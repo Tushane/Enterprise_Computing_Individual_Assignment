@@ -4,6 +4,10 @@
     height: 50%;
 }
 
+.cart_content {
+    color: black;
+}
+
 #shop_cart{
    /*color: blue;*/
     font-size:100%;
@@ -14,10 +18,11 @@
     height:100%;*/
 }
 
-#shop_cart:hover{
-    background:white;
-    color:black;
-}
+    #shop_cart:hover {
+        background: white;
+        color: black;
+        padding-left: 5%;
+    }
 
 #navpo {
     float: right;

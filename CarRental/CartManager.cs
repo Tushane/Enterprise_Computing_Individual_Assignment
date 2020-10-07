@@ -19,12 +19,15 @@ namespace CarRental
 
             HttpCookie _cart = new HttpCookie("cart_info" + cur_amount.ToString());
 
-            _cart["prod_name"] = prod_elements[0];
+            _cart["prod_name"] = prod_elements[2];
+            _cart["prod_id"] = prod_elements[0];
             _cart["prod_cost"] = prod_elements[1];
+            _cart["start_date"] = prod_elements[3];
+            _cart["end_date"] = prod_elements[4];
 
             _cart.Path = path;
 
-            _cart.Expires = DateTime.Now.AddMinutes(10);
+            _cart.Expires = DateTime.Now.AddYears(1);
 
 
           return _cart;
@@ -40,7 +43,7 @@ namespace CarRental
             {
                 cur_amount = int.Parse(_cart_size["amount"]) + 1;
                 _cart_size["amount"] = cur_amount.ToString();
-                _cart_size.Expires = DateTime.Now.AddMinutes(10);
+                _cart_size.Expires = DateTime.Now.AddYears(1);
 
                 return _cart_size;
 
