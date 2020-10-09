@@ -48,6 +48,70 @@ namespace CarRental
 
         }
 
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Calendar temp = (Calendar)sender;
+                string id = temp.ID;
+                string[] sub_id = id.Split('_');
+
+                HttpCookie changePoint = Request.Cookies["cart_info" + sub_id[1]];
+
+                if (changePoint == null)
+                {
+                    if (id.Contains("startcal"))
+                    {
+
+                        HttpCookie temp_date = new HttpCookie("temp_start_date" + sub_id[1]);
+                        temp_date.Value = temp.SelectedDate.Date.ToString("D");
+                        temp_date.Path = Request.ApplicationPath;
+                        temp_date.Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies.Add(temp_date);
+
+
+                    }
+                    else
+                    {
+
+                        HttpCookie temp_date = new HttpCookie("temp_end_date" + sub_id[1]);
+                        temp_date.Value = temp.SelectedDate.Date.ToString("D");
+                        temp_date.Path = Request.ApplicationPath;
+                        temp_date.Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies.Add(temp_date);
+
+                    }
+                }
+                else
+                {
+                    if (id.Contains("startcal"))
+                    {
+
+                        changePoint["start_date"] = temp.SelectedDate.Date.ToString("M");
+                        changePoint.Expires = DateTime.Now.AddYears(1);
+                        changePoint.Path = Request.ApplicationPath;
+                        Response.Cookies.Add(changePoint);
+
+                    }
+                    else
+                    {
+
+                        changePoint["end_date"] = temp.SelectedDate.Date.ToString("M");
+                        changePoint.Expires = DateTime.Now.AddYears(1);
+                        changePoint.Path = Request.ApplicationPath;
+                        Response.Cookies.Add(changePoint);
+
+                    }
+
+                    Response.Redirect(Request.Url.AbsolutePath);
+                }
+            }
+            catch (HttpException ecd)
+            {
+                Response.Redirect("ErrorPage.aspx");
+            }
+        }
+
         protected void but_clear_cart(object sender, EventArgs e)
         {
             Request.Cookies.Clear();

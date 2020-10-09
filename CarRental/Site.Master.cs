@@ -81,6 +81,8 @@ namespace CarRental
                 for (int i = 1; i <= size; i++)
                 {
                     HttpCookie bybye = Request.Cookies["cart_info" + i.ToString()];
+                    //Request.Cookies["temp_start_date" + i.ToString()].Expires = DateTime.Now.AddDays(-1);
+                    //Request.Cookies["temp_end_date" + i.ToString()].Expires = DateTime.Now.AddDays(-1);
                     if (bybye != null)
                     {
                         bybye.Expires = DateTime.Now.AddDays(-1);
@@ -181,7 +183,42 @@ namespace CarRental
         protected void but_delete_item(Object sender, EventArgs e)
         {
             Response.Cookies[((Button)sender).ID].Expires = DateTime.Now.AddDays(-1);
+           
+            HttpCookie temp = Request.Cookies["cart_size"];
+
+            if (temp != null) {
+              
+                int cart_size = int.Parse(temp["amount"]);
+                int amt_null = 0;
+
+                for (int i = 1; i <= cart_size; i++)
+                {
+                    HttpCookie temp1 = Request.Cookies["cart_info" + i.ToString()];
+
+
+                    if ( temp1 == null)
+                    {
+                        amt_null++;
+
+                       // Response.Cookies["main_load"].Value = amt_null.ToString();
+
+                    }
+                }
+
+                if (amt_null.ToString() == cart_size.ToString())
+                {
+
+                    temp.Expires = DateTime.Now.AddDays(-1);
+                    temp.Path = Request.ApplicationPath;
+                    Response.Cookies["main_load"].Value = "yes";
+                    Response.Cookies.Set(temp);
+
+                }
+
+            }
+
             Response.Redirect(Request.Url.AbsolutePath);
+
         }
 
         //void Application_Error(Object sender, EventArgs e)

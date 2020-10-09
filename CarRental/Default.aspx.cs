@@ -49,8 +49,9 @@ namespace CarRental
 
         protected void but_Click(object sender, EventArgs e)
         {
-            try { 
-                    HttpCookie main_load = Request.Cookies["main_load"];
+            //try
+            //{
+                HttpCookie main_load = Request.Cookies["main_load"];
 
                     if (main_load != null)
                     {
@@ -89,17 +90,17 @@ namespace CarRental
                         Response.Cookies.Add(new_date);
                     }
 
-                    string data = (((Button)sender).ID + "|" + selected_pickup_date.ToString("D") + "|" + selected_return_date.ToString("D"));
+                    string data = (((Button)sender).ID + "|" + selected_pickup_date.ToString("d") + "|" + selected_return_date.ToString("d"));
 
                     HttpCookie cart_info = manageCart.AddProdToCart(data, path, _cart_size["amount"]);
                     Response.Cookies.Add(cart_info);
 
                 Response.Redirect("Default.aspx");
-            }
-            catch(Exception ecd)
-            {
-                Response.Redirect("ErrorPage.aspx");
-            }
+            //}
+            //catch (Exception ecd)
+            //{
+            //    Response.Redirect("ErrorPage.aspx");
+            //}
 
         }
 
@@ -119,7 +120,7 @@ namespace CarRental
                     {
 
                         HttpCookie temp_date = new HttpCookie("temp_start_date" + sub_id[1]);
-                        temp_date.Value = temp.SelectedDate.Date.ToString("D");
+                        temp_date.Value = temp.SelectedDate.Date.ToString("d");
                         temp_date.Path = Request.ApplicationPath;
                         temp_date.Expires = DateTime.Now.AddDays(1);
                         Response.Cookies.Add(temp_date);
@@ -130,7 +131,7 @@ namespace CarRental
                     {
 
                         HttpCookie temp_date = new HttpCookie("temp_end_date" + sub_id[1]);
-                        temp_date.Value = temp.SelectedDate.Date.ToString("D");
+                        temp_date.Value = temp.SelectedDate.Date.ToString("d");
                         temp_date.Path = Request.ApplicationPath;
                         temp_date.Expires = DateTime.Now.AddDays(1);
                         Response.Cookies.Add(temp_date);
