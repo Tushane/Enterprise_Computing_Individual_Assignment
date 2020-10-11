@@ -53,7 +53,7 @@
                     <a class="navbar-brand" id="logo" runat="server" href="~/">Jake's Car Rental</a>
                 </div>
                 <div class="navbar-collapse collapse"  >
-                    <ul class="nav navbar-nav" style="margin-left:20%; margin-top:1%;">
+                    <ul class="nav navbar-nav" style="margin-left:23%; margin-top:1%;">
                         <li><a runat="server" href="~/">Home</a></li>
                          <li><a runat="server" href="~/About">About US</a></li>
                         <li><a runat="server" href="~/Product">Our Vechiles</a></li>

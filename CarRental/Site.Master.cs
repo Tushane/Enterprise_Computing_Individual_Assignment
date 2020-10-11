@@ -34,13 +34,15 @@ namespace CarRental
                 proPageGen webgen = new proPageGen();
                 items.Controls.Add(webgen.Cart_generate("Cart Empty", "remove"));
                 remove_cookie();
+                myDropdown.Attributes.CssStyle.Add("height","100%");
             }
             else 
             {
                 proPageGen webgen = new proPageGen();
                 items.Controls.Add(webgen.Cart_generate("Cart Empty", "remove"));
                 Load_Cart();
-             };
+                myDropdown.Attributes.CssStyle.Add("height", "520%");
+            };
 
         }
 
@@ -140,6 +142,10 @@ namespace CarRental
                         string prod_pick_up_date = "<p>Pick Up Date: " + _cart["start_date"] + "<p>";
                         string prod_return_date = "<p>Return Date: " + _cart["end_date"] + "<p>";
                         int amt_days = int.Parse((DateTime.Parse(_cart["end_date"]) - DateTime.Parse(_cart["start_date"])).TotalDays.ToString());
+                        if (amt_days == 0)
+                        {
+                            amt_days = 1;
+                        }
                         decimal prod_sub_tot = (Decimal.Parse(_cart["prod_cost"]) * amt_days);
                         string prod_sub = "<p>Sub-Total: " + prod_sub_tot.ToString() + "<p>";
                         string data = prod_name + prod_cost + prod_pick_up_date + prod_return_date + prod_sub;

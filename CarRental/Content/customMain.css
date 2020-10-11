@@ -280,7 +280,8 @@ img {
     padding-top: 1%;
     padding-bottom: 1%;
     overflow-y: auto;
-    height: 800%;
+    height: 800%; 
+   
 }
 
     /* Links inside the dropdown */

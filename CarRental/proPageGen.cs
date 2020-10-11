@@ -59,6 +59,11 @@ namespace CarRental
            
             newdiv.ID = id;
             newdiv.Attributes.Add("class", "cart_content");
+
+            if(id == "remove")
+            {
+                newdiv.Attributes.CssStyle.Add("text-align", "center");
+            }
               
             
            newdiv.InnerHtml = data;
