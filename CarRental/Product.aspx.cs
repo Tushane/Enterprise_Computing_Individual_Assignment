@@ -13,17 +13,29 @@ namespace CarRental
         {
             ProductListGenerator gen = new ProductListGenerator();
             List<Product> all_data = gen.getProducts();
+            int i = 0;
 
             foreach (Product data in all_data)
             {
+                i++;
                 proPageGen webgen = new proPageGen();
 
                 if (data != null)
                 {
                     Button dut = webgen.get_but();
-                    dut.Click += new EventHandler(but_Click);
-                    webgen.set_but(dut);
-                    maindiv.Controls.Add(webgen.generate(data));
+                        dut.Click += new EventHandler(but_Click);
+                        webgen.set_but(dut);
+                        Calendar tempcal = webgen.get_start_cal();
+                        tempcal.ID = "startcal_" + (i).ToString();
+                        tempcal.SelectionChanged += new EventHandler(Calendar1_SelectionChanged);
+                        webgen.set_start_cal(tempcal);
+
+                        tempcal = webgen.get_end_cal();
+                        tempcal.ID = "endcal_" + (i).ToString();
+                        tempcal.SelectionChanged += new EventHandler(Calendar1_SelectionChanged);
+                        webgen.set_end_cal(tempcal);
+
+                        maindivs.Controls.Add(webgen.generate(data));
                 }
             }
         }
