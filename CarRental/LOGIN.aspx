@@ -6,10 +6,10 @@
     <div class ="pannel" id ="log_pannel">
 
         <br />
-            <asp:TextBox ID="TextBox6" placeholder="Enter Your Email"  runat="server" CssClass="log_inputData" ForeColor="#000001" Wrap="False"></asp:TextBox>
+            <asp:TextBox ID="username" placeholder="Enter Your Email"  runat="server" CssClass="log_inputData" ForeColor="#000001" Wrap="False"></asp:TextBox>
            <br />
             <br />
-            <asp:TextBox ID="TextBox1" placeholder="Enter Your Password" runat="server" CssClass="log_inputData" TextMode="Password" ForeColor="#000001"></asp:TextBox>
+            <asp:TextBox ID="user_password" placeholder="Enter Your Password" runat="server" CssClass="log_inputData" TextMode="Password" ForeColor="#000001"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="LOGIN" CssClass="butdesign" Font-Bold="True" Font-Size="Medium"/>

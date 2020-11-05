@@ -196,6 +196,7 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustCart.cs" />
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

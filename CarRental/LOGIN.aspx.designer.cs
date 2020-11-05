@@ -7,29 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarRental {
-    
-    
-    public partial class LOGIN {
-        
+namespace CarRental
+{
+
+
+    public partial class LOGIN
+    {
+
         /// <summary>
-        /// TextBox6 control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
-        
+        protected global::System.Web.UI.WebControls.TextBox username;
+
         /// <summary>
-        /// TextBox1 control.
+        /// user_password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
+        protected global::System.Web.UI.WebControls.TextBox user_password;
+
         /// <summary>
         /// Button1 control.
         /// </summary>
