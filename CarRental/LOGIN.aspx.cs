@@ -55,7 +55,7 @@ namespace CarRental
 
 
                 Response.Cookies.Add(tempcookie);
-                Response.Redirect("~/ADD_PRODUCT");
+                Response.Redirect("~/Product");
             }
             else
             {

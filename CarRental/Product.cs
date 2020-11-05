@@ -14,6 +14,27 @@ namespace CarRental
         private string description;
         private string prod_name;
         private decimal price;
+        private string currency;
+
+        public Product(string id, string image_location, string description, string prod_name, decimal price, string currency)
+        {
+            this.id = id;
+            this.image_location = image_location;
+            this.description = description;
+            this.prod_name = prod_name;
+            this.price = price;
+            this.currency = currency;
+        }
+
+        public Product()
+        {
+            this.id = " ";
+            this.image_location = " ";
+            this.description = " ";
+            this.prod_name = " ";
+            this.price = 0;
+            this.currency = " ";
+        }
 
 
         //setters
@@ -42,6 +63,11 @@ namespace CarRental
             this.prod_name = name;
         }
 
+        public void setProdCurrency(string cur)
+        {
+            this.currency = cur;
+        }
+
 
         //getters
         public string getId()
@@ -67,6 +93,11 @@ namespace CarRental
         public string getProdName()
         {
             return this.prod_name;
+        }
+
+        public string getProdCur()
+        {
+            return this.currency;
         }
 
     }

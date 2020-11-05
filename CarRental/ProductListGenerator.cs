@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -14,47 +15,27 @@ namespace CarRental
         public ProductListGenerator()
         {
 
+            DatabaseConnection con = new DatabaseConnection();
 
-            temp.setId("0");
-            temp.setPrice(800);
-            temp.setDescription("A Fast, Realiable, Luxury out on the town Experience.");
-            temp.setIL("../images/banner.jpg");
-            temp.setProdName("Mustang GT500");
-            data.Add(temp);
+            SqlDataReader reader = con.readSqlData("SELECT ID, PRODUCT_PRICE, PRODUCT_DESC, PRODUCT_IMAGE, PRODUCT_NAME, CURRENCY FROM DBO.PRODUCT_DISPLAY_INFO");
 
-            temp = null;
-            temp = new Product();
+            while (reader.Read())
+            {
+                Product temp = new Product();
 
-            temp.setId("1");
-            temp.setPrice(500);
-            temp.setDescription("A Fast, Realiable, Luxury out on the town Experience.");
-            temp.setIL("../images/car1.jpg");
-            temp.setProdName("Mustang GT500");
-            data.Add(temp);
-            temp = null;
-            temp = new Product();
+                temp.setId(reader[0].ToString());
+                temp.setPrice(decimal.Parse(reader[1].ToString()));
+                temp.setDescription(reader[2].ToString());
+                temp.setIL(reader[3].ToString());
+                temp.setProdName(reader[4].ToString());
+                temp.setProdCurrency(reader[5].ToString());
 
-            temp.setId("2");
-            temp.setPrice(700);
-            temp.setDescription("A Fast, Realiable, Luxury out on the town Experience.");
-            temp.setIL("../images/car2.jpg");
-            temp.setProdName("Mustang GT500");
-            data.Add(temp);
+                data.Add(temp);
+            }
 
-            temp = null;
-            temp = new Product();
+            reader.Close();
 
-            temp.setId("3");
-            temp.setPrice(900);
-            temp.setDescription("A Fast, Realiable, Luxury out on the town Experience.");
-            temp.setIL("../images/car3.jpg");
-            temp.setProdName("Mustang GT500");
-            data.Add(temp);
-
-
-            temp = null;
-
-
+            con.closeSqlData();
         }
 
 

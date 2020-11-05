@@ -106,7 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ADD_CARS.aspx" />
     <Content Include="apply.aspx" />
+    <Content Include="CART_HIST.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -116,6 +118,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="ErrorPage.aspx" />
+    <Content Include="EXTEND_CART.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -134,6 +137,7 @@
     <Content Include="images\car3.jpg" />
     <Content Include="images\oversee.jpg" />
     <Content Include="LOGIN.aspx" />
+    <Content Include="LOGOUT.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -171,6 +175,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADD_CARS.aspx.cs">
+      <DependentUpon>ADD_CARS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADD_CARS.aspx.designer.cs">
+      <DependentUpon>ADD_CARS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="apply.aspx.cs">
       <DependentUpon>apply.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,6 +199,14 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CartManager.cs" />
+    <Compile Include="CART_HIST.aspx.cs">
+      <DependentUpon>CART_HIST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CART_HIST.aspx.designer.cs">
+      <DependentUpon>CART_HIST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart_info.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +230,13 @@
     <Compile Include="ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EXTEND_CART.aspx.cs">
+      <DependentUpon>EXTEND_CART.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EXTEND_CART.aspx.designer.cs">
+      <DependentUpon>EXTEND_CART.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,6 +246,13 @@
     </Compile>
     <Compile Include="LOGIN.aspx.designer.cs">
       <DependentUpon>LOGIN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LOGOUT.aspx.cs">
+      <DependentUpon>LOGOUT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOGOUT.aspx.designer.cs">
+      <DependentUpon>LOGOUT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>

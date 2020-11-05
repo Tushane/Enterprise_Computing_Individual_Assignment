@@ -11,106 +11,115 @@ namespace CarRental
 {
 
 
-    public partial class SiteMaster
+    public partial class ADD_CARS
     {
 
         /// <summary>
-        /// logo control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor logo;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// main control.
+        /// prod_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor main;
+        protected global::System.Web.UI.WebControls.TextBox prod_name;
 
         /// <summary>
-        /// info control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor info;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// prod control.
+        /// prod_price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor prod;
+        protected global::System.Web.UI.WebControls.TextBox prod_price;
 
         /// <summary>
-        /// con control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor con;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// apply control.
+        /// prod_desc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor apply;
+        protected global::System.Web.UI.WebControls.TextBox prod_desc;
 
         /// <summary>
-        /// c_his control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor c_his;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// text1 control.
+        /// prod_cur control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor text1;
+        protected global::System.Web.UI.WebControls.TextBox prod_cur;
 
         /// <summary>
-        /// myDropdown control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl myDropdown;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// items control.
+        /// prod_image control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder items;
+        protected global::System.Web.UI.WebControls.FileUpload prod_image;
 
         /// <summary>
-        /// MainContent control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error;
     }
 }
