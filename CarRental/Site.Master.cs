@@ -59,6 +59,7 @@ namespace CarRental
             {
                 // main_load = new HttpCookie("main_load");
                 main_load.Value = "yes";
+                Response.Cookies.Remove("main_load");
                 main_load.Path = Request.ApplicationPath;
                 main_load.Expires = DateTime.Now.AddYears(1);
                 Response.Cookies.Add(main_load);
