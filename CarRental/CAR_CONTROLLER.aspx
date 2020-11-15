@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="PRODUCT_CONTROLLER.aspx.cs" Inherits="CarRental.ADD_CARS" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="CAR_CONTROLLER.aspx.cs" Inherits="CarRental.ADD_CARS" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
       <br /> <br />

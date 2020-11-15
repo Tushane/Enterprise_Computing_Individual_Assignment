@@ -262,8 +262,8 @@ namespace CarRental
                 if (tempcookie["user_type"] == "ADMIN")
                 {
 
-                    main.InnerHtml = "PRODUCT CONTROLLER";
-                    main.HRef = "~/PRODUCT_CONTROLLER";
+                    main.InnerHtml = "CAR CONTROLLER";
+                    main.HRef = "~/CAR_CONTROLLER";
                     prod.InnerHtml = "VIEW PRODUCT";
                     apply.InnerHtml = "LOGOUT";
 

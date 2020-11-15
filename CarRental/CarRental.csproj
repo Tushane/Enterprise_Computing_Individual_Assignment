@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="PRODUCT_CONTROLLER.aspx" />
+    <Content Include="CAR_CONTROLLER.aspx" />
     <Content Include="apply.aspx" />
     <Content Include="CART_HIST.aspx" />
     <Content Include="Contact.aspx" />
@@ -175,12 +175,12 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PRODUCT_CONTROLLER.aspx.cs">
-      <DependentUpon>PRODUCT_CONTROLLER.aspx</DependentUpon>
+    <Compile Include="CAR_CONTROLLER.aspx.cs">
+      <DependentUpon>CAR_CONTROLLER.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PRODUCT_CONTROLLER.aspx.designer.cs">
-      <DependentUpon>PRODUCT_CONTROLLER.aspx</DependentUpon>
+    <Compile Include="CAR_CONTROLLER.aspx.designer.cs">
+      <DependentUpon>CAR_CONTROLLER.aspx</DependentUpon>
     </Compile>
     <Compile Include="apply.aspx.cs">
       <DependentUpon>apply.aspx</DependentUpon>
