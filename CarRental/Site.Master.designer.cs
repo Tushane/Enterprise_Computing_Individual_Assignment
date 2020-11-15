@@ -60,15 +60,6 @@ namespace CarRental
         protected global::System.Web.UI.HtmlControls.HtmlAnchor con;
 
         /// <summary>
-        /// apply control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor apply;
-
-        /// <summary>
         /// c_his control.
         /// </summary>
         /// <remarks>
@@ -76,6 +67,15 @@ namespace CarRental
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor c_his;
+
+        /// <summary>
+        /// apply control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor apply;
 
         /// <summary>
         /// text1 control.

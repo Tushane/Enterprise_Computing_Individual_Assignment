@@ -16,7 +16,7 @@ namespace CarRental
         {
             ProductListGenerator gen = new ProductListGenerator();
             List<Product> all_data = gen.getProducts();
-            int limitor = 4;
+            int limitor = 3;
             int i = 0;
 
 

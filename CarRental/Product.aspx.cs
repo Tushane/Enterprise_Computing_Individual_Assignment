@@ -13,16 +13,10 @@ namespace CarRental
         {
             ProductListGenerator gen = new ProductListGenerator();
             List<Product> all_data = gen.getProducts();
-            int limitor = 4;
-            int i = 0;
 
 
             foreach (Product data in all_data)
             {
-                i++;
-
-                if (i <= limitor)
-                {
                     proPageGen webgen = new proPageGen();
 
                     if (data != null)
@@ -45,7 +39,6 @@ namespace CarRental
 
                         maindiv.Controls.Add(webgen.generate(data, get_user()));
                     }
-                }
             }
         }
 

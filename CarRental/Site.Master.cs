@@ -13,7 +13,9 @@ namespace CarRental
         static string def_user = "default";
         protected void Page_Load(object sender, EventArgs e)
         {
+            user_login_check();
             update_nav_iu();
+            
 
             HttpCookie main_load = Request.Cookies["main_load"];
 
@@ -167,7 +169,7 @@ namespace CarRental
                 }
                 else
                 {
-                    newdiv.Attributes.Add("href", "VIEW_CART.aspx");
+                    newdiv.Attributes.Add("href", "EXTEND_CART.aspx");
                     newdiv.InnerText = "VIEW ALL ITEMS";
                 }
                 items.Controls.Add(newdiv);
@@ -244,19 +246,10 @@ namespace CarRental
                 tempcookie["user_id"] = "";
                 tempcookie.Expires = DateTime.Now.AddDays(1);
                 tempcookie.Path = Request.ApplicationPath;
+                Response.Cookies.Add(tempcookie);
 
             }
-            else
-            {
-                tempcookie["user_type"] = def_user;
-                tempcookie["username"] = "";
-                tempcookie["user_id"] = "";
-                tempcookie.Expires = DateTime.Now.AddDays(1);
-                tempcookie.Path = Request.ApplicationPath;
-            }
-
-
-            Response.Cookies.Add(tempcookie);
+    
         }
 
 
@@ -269,8 +262,8 @@ namespace CarRental
                 if (tempcookie["user_type"] == "ADMIN")
                 {
 
-                    main.InnerHtml = "ADD PRODUCT";
-                    main.HRef = "~/ADD_PRODUCT";
+                    main.InnerHtml = "PRODUCT CONTROLLER";
+                    main.HRef = "~/PRODUCT_CONTROLLER";
                     prod.InnerHtml = "VIEW PRODUCT";
                     apply.InnerHtml = "LOGOUT";
 
@@ -288,7 +281,7 @@ namespace CarRental
                 else if (tempcookie["user_type"] == "NON-ADMIN")
                 {
 
-                    main.InnerHtml = "main";
+                    main.InnerHtml = "Home";
                     main.HRef = "~/Default";
                     prod.InnerHtml = "Rentals";
                     apply.InnerHtml = "LOGOUT";
@@ -306,7 +299,7 @@ namespace CarRental
                 }
                 else
                 {
-                    main.InnerHtml = "main";
+                    main.InnerHtml = "Home";
                     main.HRef = "~/Default";
                     prod.InnerHtml = "Rentals";
                     apply.InnerHtml = "APPLY NOW!";
