@@ -31,15 +31,16 @@
         <asp:TextBox ID="username" runat="server" CssClass="inputData" ForeColor="#000001"></asp:TextBox>
           <br />
         <br />
-        <asp:Label ID="Label8" runat="server" CssClass="label" Font-Bold="False" Font-Size="Medium" Text="Note: Your Password Length has to be 9 characters and must include two numeric."></asp:Label>
+        <asp:Label ID="Label8" runat="server" CssClass="label" Font-Bold="False" Font-Size="Medium" Text="Note: Your Password Length has to be 9 characters, Includes an Upper Case Letter."></asp:Label>
+        <asp:Label ID="Label10" runat="server" CssClass="label" Font-Bold="False" Font-Size="Medium" Text="Also, needs to have a Special Character which can be @, # or & and must include a numeric value."></asp:Label>
         <br />
         <asp:Label ID="Label6" runat="server" CssClass="label" Font-Bold="False" Font-Size="Medium" Text="Create Password:"></asp:Label>
-        <asp:TextBox ID="pass1" runat="server" CssClass="inputData" ForeColor="#000001" AutoPostBack="True"  MaxLength="9" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="pass1" runat="server" CssClass="inputData" ForeColor="#000001" AutoPostBack="True"  MaxLength="9" TextMode="Password" OnTextChanged="pass1_TextChanged"></asp:TextBox>
 
         <br />
         <br />
         <asp:Label ID="Label7" runat="server" CssClass="label" Font-Bold="False" Font-Size="Medium" Text ="Confirm Password:"></asp:Label>
-        <asp:TextBox ID="pass2" runat="server" CssClass="inputData" ForeColor="#000001" AutoPostBack="True"  MaxLength="9" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="pass2" runat="server" CssClass="inputData" ForeColor="#000001"  MaxLength="9" TextMode="Password"></asp:TextBox>
        <br />
         <br />
         <asp:Button ID="Button1" runat="server" Text="SIGN UP" CssClass="butdesign" Font-Bold="True" Font-Size="Medium" OnClick="Button1_Click" style="height: 36px"/>
